@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Medical Store';
+  showFiller = false;
+  navClass= 'navbar navbar-expand-lg navbar-dark bg-primary';
 }

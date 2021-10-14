@@ -11,6 +11,10 @@ import { CustomersComponent } from './customers/customers.component';
 import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
 import { SoldProductDetailsComponent } from './sold-product-details/sold-product-details.component';
 import { ReportsComponent } from './reports/reports.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ReportsComponent } from './reports/reports.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

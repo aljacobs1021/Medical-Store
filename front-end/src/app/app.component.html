@@ -1,14 +1,30 @@
-<h1>{{title}}</h1>
-<nav>
-  <ul>
-    <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-    <li><a routerLink="/inventory" routerLinkActive="active">Inventory</a></li>
-    <li><a routerLink="/suppliers" routerLinkActive="active">Suppliers</a></li>
-    <li><a routerLink="/employees" routerLinkActive="active">Employees</a></li>
-    <li><a routerLink="/customers" routerLinkActive="active">Customers</a></li>
-    <li><a routerLink="/invoice-details" routerLinkActive="active">Invoice Details</a></li>
-    <li><a routerLink="/sold-product-details" routerLinkActive="active">Sold Product Details</a></li>
-    <li><a routerLink="/reports" routerLinkActive="active">Reports</a></li>
-  </ul>
+<mat-toolbar color="primary">
+  <span>{{title}}</span>
+</mat-toolbar> 
+
+<nav [class]="navClass">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li><a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/inventory" routerLinkActive="active">Inventory</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/suppliers" routerLinkActive="active">Suppliers</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/employees" routerLinkActive="active">Employees</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/customers" routerLinkActive="active">Customers</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/invoice-details" routerLinkActive="active">Invoice Details</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/sold-product-details" routerLinkActive="active">Sold Product Details</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/reports" routerLinkActive="active">Reports</a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
 </nav>
+
 <router-outlet></router-outlet>
