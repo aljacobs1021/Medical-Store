@@ -25,8 +25,10 @@ public class Supplier {
 	// mapping the relationships
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="sup_id")
 	private int supplierId;
-	@Column(nullable = false)
+	
+	@Column(name="supplier_name", nullable = false)
 	private String supplierName; // first name
 
 }
