@@ -23,14 +23,19 @@ public class Product {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="prod_id")
 	private int productId;
-	@Column (nullable = false) 
+	
+	@Column (name="prod_name", nullable = false) 
 	private String productName; // product name
-	@Column (nullable = false)
+	
+	@Column (name="prod_description", nullable = false)
 	private String description;
-	@Column (nullable = false)
-	private String supplier;
-	@Column (nullable = false)
+	
+	@Column (name="supplier_id", nullable = false)
+	private int supplier;
+	
+	@Column (name="price", nullable = false)
 	private double pricePerUnit;
 
 	public Product(String name, String description, double pPU) {
