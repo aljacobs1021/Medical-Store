@@ -33,12 +33,15 @@ CREATE TABLE product (
 	prod_name VARCHAR(45) NOT NULL,
 	prod_description VARCHAR(150),
 	price DOUBLE(6,2),
+    current_stock INT NOT NULL,
+    min_limit INT NOT NULL,
+    total_sold DOUBLE(9,0),
 	supplier_id INT UNSIGNED NOT NULL,
     PRIMARY KEY(prod_id),
     FOREIGN KEY(supplier_id) REFERENCES supplier(sup_id)
 );
 
--- DROP TABLE IF EXISTS order;
+-- DROP TABLE IF EXISTS transaction;
 CREATE TABLE transaction (
 	trans_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     customer_id INT UNSIGNED NOT NULL,
@@ -67,10 +70,10 @@ CREATE TABLE transaction (
 -- 	('LexCorp'),
 --     ('Wayne Industries');
 --     
--- INSERT INTO product (prod_name, prod_description, price, supplier_id)
--- VALUES ('Vitamin A', 'A vitamin supplement.', 13.00, 1),
--- 	('Tylenol', 'For headaches', 24.00, 1),
---     ('Kryptonite', '', 100.00, 2);
+-- INSERT INTO product (prod_name, prod_description, price, current_stock, min_limit, total_sold, supplier_id)
+-- VALUES ('Vitamin A', 'A vitamin supplement.', 13.00, 500, 100, 2500, 1),
+-- 	('Tylenol', 'For headaches', 24.00, 600, 100, 3424, 1),
+--     ('Kryptonite', '', 100.00, 3000, 200, 2342, 2);
 --     
 -- INSERT INTO transaction (customer_id, product_id, employee_id, date)
 -- VALUES (1, 2, 2, '2021-10-11'),
