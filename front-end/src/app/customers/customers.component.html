@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <h2>Customers</h2>
 <!--Non functional button-->
-<button>Create New </button>
+<!-- <button>Create New </button> -->
 <table>
     <thead>
         <tr>
@@ -12,10 +12,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Customer.cust_id</td>
-            <td>Customer.first_name</td>
-            <td>Customer.last_name</td>
+        <tr *ngFor = "let customer of customers">
+            <td>{{customer.customerId}}</td>
+            <td>{{customer.first}}</td>
+            <td>{{customer.last}}</td>
             <!--Button not functional yet-->
             <td><button>View</button><button>Update</button><button>Remove</button></td>
         </tr>

@@ -17,7 +17,8 @@ const routes: Routes = [
   {path: 'invoice-details', component: InvoiceDetailsComponent},
   {path: 'sold-product-details', component: SoldProductDetailsComponent},
   {path: 'suppliers', component: SuppliersComponent},
-  {path: 'reports', component: ReportsComponent}
+  {path: 'reports', component: ReportsComponent},
+  {path: '',   redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
 @NgModule({
