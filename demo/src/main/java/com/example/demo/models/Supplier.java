@@ -19,7 +19,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table
+@Table(name="supplier")
 public class Supplier {
 	
 	// mapping the relationships
@@ -31,4 +31,23 @@ public class Supplier {
 	@Column(name="supplier_name", nullable = false)
 	private String supplierName; // first name
 
+	public Supplier() {}
+
+	public int getSupplierId() {
+		return supplierId;
+	}
+
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
+	}
+
+	public String getSupplierName() {
+		return supplierName;
+	}
+
+	public void setSupplierName(String supplierName) {
+		this.supplierName = supplierName;
+	}
+	
+	
 }
