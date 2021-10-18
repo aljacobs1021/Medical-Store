@@ -1,4 +1,4 @@
-package com.example.models;
+package com.example.demo.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -40,10 +40,53 @@ public class Employee {
 	@Column(name="salary", nullable = false)
 	private double salary;
 	
+	public Employee() {}
+	
 	public Employee(int id, String first, String last) {
-		super();
 		this.employeeId = id;
 		this.first = first;
 		this.last = last;
 	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getFirst() {
+		return first;
+	}
+
+	public void setFirst(String first) {
+		this.first = first;
+	}
+
+	public String getLast() {
+		return last;
+	}
+
+	public void setLast(String last) {
+		this.last = last;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	
 }
