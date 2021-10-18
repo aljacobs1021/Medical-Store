@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <h2>Employees</h2>
 <!--Non functional button-->
-<button>Create New</button>
+<!-- <button>Create New</button> -->
 <table>
     <thead>
         <tr>
@@ -14,12 +14,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Employee.cust_id</td>
-            <td>Employee.first_name</td>
-            <td>Employee.last_name</td>
-            <td>Employee.role</td>
-            <td>Employee.salary</td>
+        <tr *ngFor = "let employee of employees">
+            <td>{{employee.employeeId}}</td>
+            <td>{{employee.first}}</td>
+            <td>{{employee.last}}</td>
+            <td>{{employee.role}}</td>
+            <td>{{employee.salary | currency:'USD'}}</td>
             <!--Button not functional yet-->
             <td><button>View</button><button>Update</button><button>Remove</button></td>
         </tr>

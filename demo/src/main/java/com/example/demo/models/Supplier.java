@@ -1,4 +1,4 @@
-package com.example.models;
+package com.example.demo.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,25 +20,15 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table
-public class Customer {
+public class Supplier {
 	
 	// mapping the relationships
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="cust_id")
-	private int customerId;
+	@Column(name="sup_id")
+	private int supplierId;
 	
-	@Column(name="first_name", nullable = false)
-	private String first; // first name
-	
-	@Column(name="last_name", nullable = false)
-	private String last; // last name
+	@Column(name="supplier_name", nullable = false)
+	private String supplierName; // first name
 
-	public Customer(int id, String first, String last) {
-		super();
-		this.customerId = id;
-		this.first = first;
-		this.last = last;
-	}
 }
-
