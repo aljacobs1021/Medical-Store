@@ -25,13 +25,14 @@ public class Customer {
 	// mapping the relationships
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="cust_id")
 	private int customerId;
-	@Column(nullable = false)
+	
+	@Column(name="first_name", nullable = false)
 	private String first; // first name
-	@Column(nullable = false)
+	
+	@Column(name="last_name", nullable = false)
 	private String last; // last name
-	@Column(nullable = false)
-	private String role;
 
 	public Customer(int id, String first, String last) {
 		super();

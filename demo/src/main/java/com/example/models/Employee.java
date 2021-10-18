@@ -25,14 +25,19 @@ public class Employee {
 	// mapping the relationships
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="emp_id")
 	private int employeeId;
-	@Column(nullable = false)
+	
+	@Column(name="first_name", nullable = false)
 	private String first; // first name
-	@Column(nullable = false)
+	
+	@Column(name="last_name", nullable = false)
 	private String last; // last name
-	@Column(nullable = false)
+	
+	@Column(name="role", nullable = false)
 	private String role;
-	@Column(nullable = false)
+	
+	@Column(name="salary", nullable = false)
 	private double salary;
 	
 	public Employee(int id, String first, String last) {
