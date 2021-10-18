@@ -1,4 +1,4 @@
-package com.example.models;
+package com.example.demo.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,7 +25,7 @@ public class Customer {
 	
 	// mapping the relationships
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="cust_id")
 	private int customerId;
 	
@@ -35,11 +35,43 @@ public class Customer {
 	@Column(name="last_name", nullable = false)
 	private String last; // last name
 
+	
+	public Customer() {}
+	
+	public Customer(int id) {
+		this.customerId = id;
+	}
+	
 	public Customer(int id, String first, String last) {
-		super();
 		this.customerId = id;
 		this.first = first;
 		this.last = last;
 	}
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getFirst() {
+		return first;
+	}
+
+	public void setFirst(String first) {
+		this.first = first;
+	}
+
+	public String getLast() {
+		return last;
+	}
+
+	public void setLast(String last) {
+		this.last = last;
+	}
+	
+	
 }
 
