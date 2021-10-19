@@ -5,11 +5,12 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.models.Employee;
+import com.example.demo.models.Supplier;
 
 @Repository
-public interface EmployeeDAO extends JpaRepository<Employee, Integer> {
+public interface SupplierDAO extends JpaRepository<Supplier, Integer> {
 
-	List<Employee> findAll();
-	public Employee findById(int id);
+	public List<Supplier> findAll();
+	public Supplier findById(int id);
+	
 }

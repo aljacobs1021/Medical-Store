@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-//import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -31,4 +30,29 @@ public class Supplier {
 	@Column(name="supplier_name", nullable = false)
 	private String supplierName; // first name
 
+	public Supplier () {
+		
+	}
+	public Supplier(int supplierId, String supplierName) {
+		super();
+		this.supplierId = supplierId;
+		this.supplierName = supplierName;
+	}
+
+	public int getSupplierId() {
+		return supplierId;
+	}
+
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
+	}
+
+	public String getSupplierName() {
+		return supplierName;
+	}
+
+	public void setSupplierName(String supplierName) {
+		this.supplierName = supplierName;
+	}
+	
 }
