@@ -16,6 +16,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     CustomersComponent,
     InvoiceDetailsComponent,
     SoldProductDetailsComponent,
-    ReportsComponent
+    ReportsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

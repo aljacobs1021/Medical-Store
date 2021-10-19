@@ -10,7 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -49,7 +48,7 @@ public class Product {
 	private int currentStock;
 	
 	@Column(name="min_limit", nullable=false)
-	private int minLimit;
+	private int minimumLimit;
 	
 	@Column(name="total_sold", nullable=false)
 	private double totalSold;
@@ -111,11 +110,11 @@ public class Product {
 	}
 
 	public int getMinLimit() {
-		return minLimit;
+		return minimumLimit;
 	}
 
 	public void setMinLimit(int minLimit) {
-		this.minLimit = minLimit;
+		this.minimumLimit = minLimit;
 	}
 
 	public double getTotalSold() {

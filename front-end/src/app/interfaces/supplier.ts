@@ -1,4 +1,4 @@
-export interface Customer {
+export interface Supplier {
     supplierId: number;
     name: string;
     // address: string;

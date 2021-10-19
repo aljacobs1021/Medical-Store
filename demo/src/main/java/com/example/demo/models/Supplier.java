@@ -32,6 +32,15 @@ public class Supplier {
 	private String supplierName; // first name
 
 	public Supplier() {}
+	
+
+	public Supplier(int supplierId, String supplierName) {
+		super();
+		this.supplierId = supplierId;
+		this.supplierName = supplierName;
+	}
+
+
 
 	public int getSupplierId() {
 		return supplierId;
@@ -48,6 +57,7 @@ public class Supplier {
 	public void setSupplierName(String supplierName) {
 		this.supplierName = supplierName;
 	}
+	
 	
 	
 }

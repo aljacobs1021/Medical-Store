@@ -12,24 +12,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.Product;
-import com.example.demo.service.ProductManager;
+import com.example.demo.models.Transaction;
+import com.example.demo.service.TransactionManager;
 
 @RestController
-@RequestMapping(path="product")
-public class ProductController {
+@RequestMapping(path="transaction")
+public class TransactionController {
 	
 	@SuppressWarnings("unused")
-	private static final Logger logger = LogManager.getLogger(ProductController.class);
+	private static final Logger logger = LogManager.getLogger(TransactionController.class);
 
 	@Autowired
-	private ProductManager productManager;
+	private TransactionManager transactionManager;
 	
 	@CrossOrigin(origins="http://localhost:4200")
 	@GetMapping(path="/getAll", produces="application/json")
-	public ResponseEntity<List<Product>> getAll() {
-		List<Product> prodList = productManager.findAll();
+	public ResponseEntity<List<Transaction>> getAll() {
+		List<Transaction> transList = transactionManager.findAll();
 		
-		return new ResponseEntity<List<Product>>(prodList, HttpStatus.OK);
+		return new ResponseEntity<List<Transaction>>(transList, HttpStatus.OK);
 	}
 }

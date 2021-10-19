@@ -1,8 +1,12 @@
+import { Supplier } from './supplier'
+
 export interface Product {
     productId: number;
-    name: string;
+    productName: string;
     description: string;
-    price: number;
-    minimumLimit: number;
+    supplier: Supplier;
+    pricePerUnit: number;
     currentStock: number;
+    minimumLimit: number;
+    totalSold: number;
 }
