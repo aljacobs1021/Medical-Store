@@ -1,17 +1,16 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import com.example.demo.dao.ReportsDAO;
+import com.example.demo.models.Customer;
 import com.example.demo.models.Reports;
 import com.example.demo.models.ReportsView;
 
-public class ReportsService {
+public interface ReportsService {
 	
-	private ReportsDAO rDao;
-	private ReportsView rView;
-	
-	public void printReport(Reports report) {
-		rView.printReportInformation(report);
-	}
+	public void printReport(Reports report);
+	List<Reports> findAll();
 	
 	
 }
