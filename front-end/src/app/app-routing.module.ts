@@ -5,13 +5,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
+import { ProductsComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SoldProductDetailsComponent } from './sold-product-details/sold-product-details.component';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'inventory', component: InventoryComponent},
+  // {path: 'inventory', component: InventoryComponent},
+  {path: 'products', component: ProductsComponent},
   {path: 'customers', component: CustomersComponent},
   {path: 'employees', component: EmployeesComponent},
   {path: 'invoice-details', component: InvoiceDetailsComponent},

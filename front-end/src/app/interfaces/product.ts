@@ -1,8 +1,8 @@
 export interface Product {
     productId: number;
-    name: string;
+    productName: string;
     description: string;
-    price: number;
-    minimumLimit: number;
+    pricePerUnit: number;
+    minLimit: number;
     currentStock: number;
 }
