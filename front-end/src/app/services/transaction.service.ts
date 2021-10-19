@@ -19,4 +19,8 @@ export class TransactionService {
   getAllTransactions(): Observable<Transaction[]>{
     return this.http.get<Transaction[]>(`${this.baseUrl}getAll`);
   }
+
+  findByName(id: number): Observable<Transaction[]>{
+    return this.http.get<Transaction[]>(`${this.baseUrl}findAllByCustomerId/`+ id)
+  }
 }

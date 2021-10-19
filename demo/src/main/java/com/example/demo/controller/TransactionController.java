@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,14 @@ public class TransactionController {
 	@GetMapping(path="/getAll", produces="application/json")
 	public ResponseEntity<List<Transaction>> getAll() {
 		List<Transaction> transList = transactionManager.findAll();
+		
+		return new ResponseEntity<List<Transaction>>(transList, HttpStatus.OK);
+	}
+	
+	@CrossOrigin(origins="http://localhost:4200")
+	@GetMapping(path="/findAllByCustomerId/{id}", produces="application/json")
+	public ResponseEntity<List<Transaction>> findAllByCustomerId(@PathVariable int id) {
+		List<Transaction> transList = transactionManager.findAllByCustomer(id);
 		
 		return new ResponseEntity<List<Transaction>>(transList, HttpStatus.OK);
 	}

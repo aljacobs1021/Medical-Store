@@ -7,5 +7,7 @@ import com.example.demo.models.Transaction;
 public interface TransactionManager {
 	
 	List<Transaction> findAll();
+	
+	List<Transaction> findAllByCustomer(int id);
 
 }

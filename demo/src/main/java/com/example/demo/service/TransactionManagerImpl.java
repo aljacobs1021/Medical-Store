@@ -18,5 +18,10 @@ public class TransactionManagerImpl implements TransactionManager{
 	public List<Transaction> findAll() {
 		return transactionDAO.findAll();
 	}
+	
+	@Override
+	public List<Transaction> findAllByCustomer(int id) {
+		return transactionDAO.findAllByCustomer(id);
+	}
 
 }
