@@ -18,7 +18,7 @@ import lombok.ToString;
 @Getter
 @Setter
 
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Entity
@@ -38,13 +38,9 @@ public class Customer {
 	private String last; // last name
 
 	
-	// public Customer() {}
+	public Customer() {}
 	
-	public Customer(int id) {
-		this.customerId = id;
-	}
-	
-	/* public Customer(int id, String first, String last) {
+	public Customer(int id, String first, String last) {
 		this.customerId = id;
 		this.first = first;
 		this.last = last;
@@ -72,7 +68,7 @@ public class Customer {
 
 	public void setLast(String last) {
 		this.last = last;
-	} */
+	} 
 	
 	
 }

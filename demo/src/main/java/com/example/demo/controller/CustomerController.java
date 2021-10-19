@@ -28,9 +28,9 @@ public class CustomerController {
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(path="/getAll", produces="application/json")
 	public ResponseEntity<List<Customer>> getAll(){
-		logger.info("beep");
+		logger.info("Getting list of all customers");
 		List<Customer> custList = customerManager.findAll();
-		logger.info("beep1");
+		logger.info("Finding all customers");
 		return new ResponseEntity<List<Customer>>(custList, HttpStatus.OK);
 	}
 	
