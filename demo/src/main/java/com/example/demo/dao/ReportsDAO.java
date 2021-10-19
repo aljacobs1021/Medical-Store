@@ -6,11 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.models.Customer;
+import com.example.demo.models.Reports;
 
 @Repository
-public interface CustomerDAO extends JpaRepository<Customer, Integer>{
-	
-	public List<Customer> findAll();
-	public Customer findById(int id);
-
+public interface ReportsDAO extends JpaRepository<Reports, Integer>{
+	List<Reports> findAll();
 }

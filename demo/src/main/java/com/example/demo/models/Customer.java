@@ -8,7 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+//import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 //import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,6 +18,7 @@ import lombok.ToString;
 @Getter
 @Setter
 
+@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Entity
@@ -35,13 +38,13 @@ public class Customer {
 	private String last; // last name
 
 	
-	public Customer() {}
+	// public Customer() {}
 	
 	public Customer(int id) {
 		this.customerId = id;
 	}
 	
-	public Customer(int id, String first, String last) {
+	/* public Customer(int id, String first, String last) {
 		this.customerId = id;
 		this.first = first;
 		this.last = last;
@@ -69,7 +72,7 @@ public class Customer {
 
 	public void setLast(String last) {
 		this.last = last;
-	}
+	} */
 	
 	
 }
