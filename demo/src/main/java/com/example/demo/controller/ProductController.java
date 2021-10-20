@@ -19,7 +19,6 @@ import com.example.demo.service.ProductManager;
 @RequestMapping(path="product")
 public class ProductController {
 	
-	@SuppressWarnings("unused")
 	private static final Logger logger = LogManager.getLogger(ProductController.class);
 
 	@Autowired

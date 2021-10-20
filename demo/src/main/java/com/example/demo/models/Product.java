@@ -124,5 +124,4 @@ public class Product {
 	public void setTotalSold(double totalSold) {
 		this.totalSold = totalSold;
 	}
-	
 }

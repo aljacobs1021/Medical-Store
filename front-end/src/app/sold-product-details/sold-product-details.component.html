@@ -11,46 +11,46 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Product.prodId</td>
-            <td>Product.name</td>
-            <td>Product.desc</td>
-            <td>Product.price</td>
-            <td>Product.supplierId</td>
+        <tr *ngFor = "let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.pricePerUnit}}</td>
+            <!-- <td>{{products.supplierId}}</td> -->
         </tr>
     </tbody>
-</table>
+</table> 
+
+
 
 <hr>
-
 <table>
     <thead>
-        <tr>
-            <th>Sold Product Details</th>
-            <th></th>
-        </tr>
+        <th>Sold Product Details</th>
+        <th></th>
     </thead>
     <tbody>
         <tr>
-            <td>Product ID</td>
-            <td>Product.prodId</td>  
+            <td>ID</td>
+            <td>ID</td>
         </tr>
         <tr>
-            <td>Product Name</td>
-            <td>Product.prodName</td>  
+            <td>Name</td>
+            <td>Name</td>
         </tr>
         <tr>
-            <td>Product Description</td>
-            <td>Product.prodDesc</td>  
+            <td>Description</td>
+            <td>Description</td>
         </tr>
         <tr>
-            <td>Product Price</td>
-            <td>Product.prodPrice</td>  
+            <td>Price</td>
+            <td>Price</td>
         </tr>
         <tr>
-            <td>Supplier ID</td>
-            <td>Product.supplierId</td>  
+            <td>Supplier</td>
+            <td>Supplier</td>
         </tr>
     </tbody>
 </table>
 </div>
+
