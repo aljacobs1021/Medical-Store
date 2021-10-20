@@ -8,6 +8,7 @@
             <th>Description</th>
             <th>Price</th>
             <th>Supplier ID</th>
+            <th>Supplier Name</th>
         </tr>
     </thead>
     <tbody>
@@ -15,8 +16,9 @@
             <td>{{product.productId}}</td>
             <td>{{product.productName}}</td>
             <td>{{product.description}}</td>
-            <td>{{product.pricePerUnit}}</td>
-            <!-- <td>{{products.supplierId}}</td> -->
+            <td>{{product.pricePerUnit | currency}}</td>
+            <td>{{product.supplier.supplierId}}</td>
+            <td>{{product.supplier.supplierName}}</td> 
         </tr>
     </tbody>
 </table> 
@@ -24,7 +26,7 @@
 
 
 <hr>
-<table>
+<!-- <table>
     <thead>
         <th>Sold Product Details</th>
         <th></th>
@@ -51,6 +53,6 @@
             <td>Supplier</td>
         </tr>
     </tbody>
-</table>
+</table> -->
 </div>
 

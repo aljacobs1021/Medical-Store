@@ -15,13 +15,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Product.prodId</td>
-                <td>Product.name</td>
-                <td>Product.desc</td>
-                <td>Product.price</td>
-                <td>Product.minLimit</td>
-                <td>Product.currentStock</td>
+            <tr *ngFor = " let product of products ">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.pricePerUnit | currency }}</td>
+                <td>{{product.minLimit}}</td>
+                <td>{{product.currentStock}}</td>
                 <!--Button not functional yet-->
                 <td><button>View</button><button>Update </button><button>Remove </button></td>
             </tr>
