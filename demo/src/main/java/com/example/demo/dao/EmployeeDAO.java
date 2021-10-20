@@ -11,4 +11,5 @@ import com.example.demo.models.Employee;
 public interface EmployeeDAO extends JpaRepository<Employee, Integer> {
 
 	List<Employee> findAll();
+	public Employee findById(int id);
 }

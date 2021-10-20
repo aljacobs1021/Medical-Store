@@ -12,28 +12,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.Customer;
-import com.example.demo.service.CustomerManager;
+import com.example.demo.models.Supplier;
+import com.example.demo.service.SupplierManager;
 
 @RestController
-@RequestMapping(path="customer")
-public class CustomerController {
-	
-	private static final Logger logger = LogManager.getLogger(CustomerController.class);
+@RequestMapping(path="supplier")
+public class SupplierController {
 
+	private static final Logger logger = LogManager.getLogger(SupplierController.class);
 	
 	@Autowired
-	private CustomerManager customerManager;
+	private SupplierManager supplierManager;
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(path="/getAll", produces="application/json")
-	public ResponseEntity<List<Customer>> getAll(){
-		logger.info("Getting list of all customers");
-		List<Customer> custList = customerManager.findAll();
-		logger.info("Finding all customers");
-		return new ResponseEntity<List<Customer>>(custList, HttpStatus.OK);
+	public ResponseEntity<List<Supplier>> getAll(){
+		logger.info("Getting list of all suppliers");
+		List<Supplier> suppList = supplierManager.findAll();
+		logger.info("Finding all suppliers");
+		return new ResponseEntity<List<Supplier>>(suppList, HttpStatus.OK);
 	}
-	
-	
-
 }

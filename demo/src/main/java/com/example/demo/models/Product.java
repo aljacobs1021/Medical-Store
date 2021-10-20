@@ -10,15 +10,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Getter
 @Setter
 
+//@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Entity
@@ -35,7 +38,6 @@ public class Product {
 	
 	@Column (name="prod_description", nullable = false)
 	private String description;
-	
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="supplier_id", nullable = false)
@@ -54,11 +56,17 @@ public class Product {
 	private double totalSold;
 	
 	public Product() {}
-
-	public Product(String name, String description, double pPU) {
-		this.productName = name;
+	
+	public Product(int productId, String productName, String description, double pricePerUnit, int currentStock,
+			int minLimit, double totalSold) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
 		this.description = description;
-		this.pricePerUnit = pPU;
+		this.pricePerUnit = pricePerUnit;
+		this.currentStock = currentStock;
+		this.minLimit = minLimit;
+		this.totalSold = totalSold;
 	}
 
 	public int getProductId() {
@@ -85,14 +93,6 @@ public class Product {
 		this.description = description;
 	}
 
-	public Supplier getSupplier() {
-		return supplier;
-	}
-
-	public void setSupplier(Supplier supplier) {
-		this.supplier = supplier;
-	}
-
 	public double getPricePerUnit() {
 		return pricePerUnit;
 	}
@@ -110,11 +110,11 @@ public class Product {
 	}
 
 	public int getMinLimit() {
-		return minimumLimit;
+		return minLimit;
 	}
 
 	public void setMinLimit(int minLimit) {
-		this.minimumLimit = minLimit;
+		this.minLimit = minLimit;
 	}
 
 	public double getTotalSold() {
@@ -124,6 +124,5 @@ public class Product {
 	public void setTotalSold(double totalSold) {
 		this.totalSold = totalSold;
 	}
-	
 	
 }

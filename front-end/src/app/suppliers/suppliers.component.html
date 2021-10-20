@@ -10,9 +10,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>supplier.sup_id</td>
-            <td>supplier.name</td>
+        <tr *ngFor = "let supplier of suppliers">
+            <td>{{supplier.supplierId}}</td>
+            <td>{{supplier.supplierName}}</td>
             <td><button>View</button><button>Update</button><button>Remove</button></td>
         </tr>
     </tbody>

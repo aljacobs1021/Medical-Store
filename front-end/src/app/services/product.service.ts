@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Product } from '../interfaces/product';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,11 @@ export class ProductService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private baseUrl: string = "http://localhost:8080/product/"
+  private baseUrl: string = "http://localhost:8080/product"
 
   constructor(private http: HttpClient) { }
 
-  getAllProducts(): Observable<Product[]>{
+  getAllSuppliers(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}getAll`);
   }
 }

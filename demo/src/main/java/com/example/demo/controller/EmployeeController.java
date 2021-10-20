@@ -19,20 +19,17 @@ import com.example.demo.service.EmployeeManager;
 @RestController
 @RequestMapping(path="employee")
 public class EmployeeController {
-	
-		
 	private static final Logger logger = LogManager.getLogger(EmployeeController.class);
 
-		
 	@Autowired
 	private EmployeeManager employeeManager;
 		
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(path="/getAll", produces="application/json")
 	public ResponseEntity<List<Employee>> getAll(){
-		logger.info("beep");
+		logger.info("Getting all employees");
 		List<Employee> empList = employeeManager.findAll();
-		logger.info("beep1");
+		logger.info("Finding all employees");
 		return new ResponseEntity<List<Employee>>(empList, HttpStatus.OK);
 	}
 		

@@ -17,7 +17,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,6 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatSidenavModule,
     HttpClientModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

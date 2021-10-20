@@ -10,13 +10,13 @@ import com.example.demo.models.Product;
 
 @Service
 public class ProductManagerImpl implements ProductManager {
-	
+
 	@Autowired
-	private ProductDAO productDAO;
+	private ProductDAO prodDAO;
 	
 	@Override
 	public List<Product> findAll() {
-		return productDAO.findAll();
+		return prodDAO.findAll();
 	}
 
 }
