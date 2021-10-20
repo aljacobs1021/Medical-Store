@@ -38,7 +38,7 @@ import { ProductsComponent } from './products/products.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,18 +19,18 @@ import com.example.demo.service.ProductManager;
 @RequestMapping(path="product")
 public class ProductController {
 	
-	@SuppressWarnings("unused")
-	private static final Logger logger = LogManager.getLogger(ProductController.class);
-
-	@Autowired
-	private ProductManager productManager;
-	
-	@CrossOrigin(origins="http://localhost:4200")
-	@GetMapping(path="/getAll", produces="application/json")
-	public ResponseEntity<List<Product>> getAll() {
-		logger.info("Getting all products");
-		List<Product> prodList = productManager.findAll();
+		private static final Logger logger = LogManager.getLogger(ProductController.class);
 		
-		return new ResponseEntity<List<Product>>(prodList, HttpStatus.OK);
-	}
+		@Autowired
+		private ProductManager productManager;
+		
+		@CrossOrigin(origins="http://localhost:4200")
+		@GetMapping(path="/getAll", produces="application/json")
+		public ResponseEntity<List<Product>> getAll() {
+			logger.info("Getting all products");
+			List<Product> prodList = productManager.findAll();
+			logger.info("Finding all products");
+			return new ResponseEntity<List<Product>>(prodList, HttpStatus.OK);
+		}
+		
 }
