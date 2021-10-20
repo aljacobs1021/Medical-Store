@@ -25,7 +25,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table
+@Table(name="product")
 public class Product {
 	
 	@Id
@@ -39,9 +39,9 @@ public class Product {
 	@Column (name="prod_description", nullable = false)
 	private String description;
 	
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name="sup_id", nullable = false)
-//	private Supplier supplier;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="supplier_id", nullable = false)
+	private Supplier supplier;
 	
 	@Column (name="price", nullable = false)
 	private double pricePerUnit;
@@ -54,7 +54,7 @@ public class Product {
 	
 	@Column(name="total_sold", nullable=false)
 	private double totalSold;
-
+	
 	public Product() {}
 	
 	public Product(int productId, String productName, String description, double pricePerUnit, int currentStock,
@@ -125,11 +125,4 @@ public class Product {
 		this.totalSold = totalSold;
 	}
 	
-//	@Autowired
-//	public Product(String name, String description, double pPU) {
-//		super();
-//		this.productName = name;
-//		this.description = description;
-//		this.pricePerUnit = pPU;
-//	}
 }

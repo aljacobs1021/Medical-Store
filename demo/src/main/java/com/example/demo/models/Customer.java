@@ -25,7 +25,7 @@ public class Customer {
 	
 	// mapping the relationships
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="cust_id")
 	private int customerId;
 	
