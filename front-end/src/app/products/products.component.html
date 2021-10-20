@@ -9,6 +9,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th>Supplier</th>
                 <th>Minimum Limit</th>
                 <th>Current Stock</th>
                 <th>Actions</th>
@@ -20,9 +21,9 @@
                 <td>{{product.productName}}</td>
                 <td>{{product.description}}</td>
                 <td>{{product.pricePerUnit | currency}}</td>
-                <td>{{product.currentStock}}</td>
+                <td>{{product.supplier.supplierName}}</td>
                 <td>{{product.minLimit}}</td>
-                <!-- <td>{{product.supplier.supplierName}}</td> -->
+                <td>{{product.currentStock}}</td>
                 <!--Button not functional yet-->
                 <td><button>View</button><button>Update </button><button>Remove </button></td>
             </tr>
