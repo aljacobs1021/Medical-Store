@@ -50,7 +50,7 @@ public class Product {
 	private int currentStock;
 	
 	@Column(name="min_limit", nullable=false)
-	private int minimumLimit;
+	private int minLimit;
 	
 	@Column(name="total_sold", nullable=false)
 	private double totalSold;

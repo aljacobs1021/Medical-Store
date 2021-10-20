@@ -8,6 +8,6 @@ export interface Product {
     pricePerUnit: number;
     // might have to fix minLimit -> minimumLimit
     currentStock: number;
-    minimumLimit: number;
+    minLimit: number;
     totalSold: number;
 }
