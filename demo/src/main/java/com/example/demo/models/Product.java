@@ -124,5 +124,15 @@ public class Product {
 	public void setTotalSold(double totalSold) {
 		this.totalSold = totalSold;
 	}
+
+	public Supplier getSupplier() {
+		return supplier;
+	}
+
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}
+	
+	
 	
 }
